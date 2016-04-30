@@ -1,0 +1,194 @@
+@charset 'utf-8';
+
+@import 'settings';
+@import 'foundation';
+// @import 'motion-ui';
+
+@include foundation-global-styles;
+@include foundation-grid;
+// @include foundation-flex-grid;
+@include foundation-typography;
+@include foundation-button;
+// @include foundation-forms;
+// @include foundation-range-input;
+// @include foundation-accordion;
+// @include foundation-accordion-menu;
+// @include foundation-badge;
+// @include foundation-breadcrumbs;
+// @include foundation-button-group;
+// @include foundation-callout;
+// @include foundation-close-button;
+// @include foundation-menu;
+// @include foundation-menu-icon;
+// @include foundation-drilldown-menu;
+// @include foundation-dropdown;
+// @include foundation-dropdown-menu;
+// @include foundation-flex-video;
+// @include foundation-label;
+// @include foundation-media-object;
+// @include foundation-off-canvas;
+// @include foundation-orbit;
+// @include foundation-pagination;
+// @include foundation-progress-bar;
+// @include foundation-progress-element;
+// @include foundation-meter-element;
+// @include foundation-slider;
+// @include foundation-sticky;
+// @include foundation-reveal;
+// @include foundation-switch;
+// @include foundation-table;
+// @include foundation-tabs;
+// @include foundation-thumbnail;
+// @include foundation-title-bar;
+// @include foundation-tooltip;
+// @include foundation-top-bar;
+// @include foundation-visibility-classes;
+// @include foundation-float-classes;
+// @include foundation-flex-classes;
+
+// @include motion-ui-transitions;
+// @include motion-ui-animations;
+
+
+
+$white: #FFFCF0;
+
+
+.script {
+	font-family: 'Amatic SC', cursive;
+}
+
+.fancy {
+	font-family: 'Bad Script', cursive;
+}
+
+h1 {
+	// @extend .script;
+	@extend .fancy;
+	font-size: 8em;
+}
+h2 {
+	@extend .script;
+	font-weight: bold;
+	// @extend .fancy;
+}
+h3 {
+	// @extend .script;
+	@extend .fancy;
+	font-size: 6em;
+	line-height: 1.125;
+	margin-top: 0.25em;
+	margin-bottom: 0.25em;
+}
+h4 {
+	@extend .script;
+	font-weight: bold;
+	font-size: 3em;
+	margin-bottom: 1em;
+}
+h5 {
+	@extend .script;
+	font-weight: normal;
+	font-size: 3em;
+	margin-top: 0.25em;
+	margin-bottom: 1em;
+}
+
+p {
+	address & {
+		font-style: normal;
+	}
+}
+
+a {
+	color: #000;
+}
+
+.button {
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	// border-radius: .25em;
+
+	&.hollow {
+		border-color: transparent;
+		color: #000;
+		@extend .script;
+		// font-weight: bold;
+		font-size: 1.5em;
+		padding: 0;
+		margin-right: 1em;
+		border-bottom: 1px solid #000;
+		// border-radius: 0;
+
+		&:hover {
+			border-color: transparent;
+			border-bottom-color: #000;
+		}
+
+	}
+}
+
+img.parallax {
+	position: relative;
+	z-index: -1;
+}
+
+
+body {
+	padding: 4em;
+	background-color: $white;
+}
+
+
+.table {
+	height: 100%;
+	width: 100%;
+	display: table;
+}
+
+.cell {
+	height: 100%;
+	width: 100%;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+
+section {
+	margin-bottom: 10em;
+
+	&.full {
+		height: 80vh;
+		// background-color: #f5f5f5;
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: center center;
+
+		color: $white;
+	}
+
+	img {
+		width: 100%;
+	}
+}
+
+.panel {
+	background-color: $white;
+	padding: 4em;
+	margin-top: 4em;
+	position: relative;
+	z-index: 999;
+
+	@media (min-width: 640px) {
+		.medium-4 & {
+			margin-right: 0;
+			margin-left: -12em;
+		}
+		.medium-pull-8 & {
+			margin-left: 0;
+			margin-right: -12em;
+
+		}
+	}
+
+}
