@@ -1,4 +1,4 @@
-$(document).foundation();
+// $(document).foundation();
 
 $(document).ready(function(){
 	Site.init();
@@ -6,7 +6,9 @@ $(document).ready(function(){
 
 var Site = {
 	init: function() {
-		Site.scrollmagic();
+		if ( $(window).width() > 640 ) {
+			Site.scrollmagic();
+		}
 	},
 	scrollmagic: function() {
 		// init controller
@@ -28,7 +30,5 @@ var Site = {
 				.setTween( tween )
 				.addTo(controller)
 		});
-
-
 	}
 }

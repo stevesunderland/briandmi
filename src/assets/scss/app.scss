@@ -65,20 +65,30 @@ $white: #FFFCF0;
 h1 {
 	// @extend .script;
 	@extend .fancy;
-	font-size: 8em;
+	font-size: 6em;
+	line-height: 1;
+
+	@media (min-width: 640px) {
+		font-size: 8em;
+	}
 }
 h2 {
 	@extend .script;
 	font-weight: bold;
+	font-size: 2.5em;
 	// @extend .fancy;
 }
 h3 {
 	// @extend .script;
 	@extend .fancy;
-	font-size: 6em;
+	font-size: 4em;
 	line-height: 1.125;
 	margin-top: 0.25em;
 	margin-bottom: 0.25em;
+
+	@media (min-width: 640px) {
+		font-size: 6em;
+	}
 }
 h4 {
 	@extend .script;
@@ -135,8 +145,12 @@ img.parallax {
 
 
 body {
-	padding: 4em;
 	background-color: $white;
+	padding: 2em;
+
+	@media (min-width: 640px) {
+		padding: 4em;
+	}
 }
 
 
@@ -155,7 +169,11 @@ body {
 
 
 section {
-	margin-bottom: 10em;
+	margin-bottom: 5em;
+
+	@media (min-width: 640px) {
+			margin-bottom: 10em;
+	}
 
 	&.full {
 		height: 80vh;
@@ -174,12 +192,14 @@ section {
 
 .panel {
 	background-color: $white;
-	padding: 4em;
-	margin-top: 4em;
 	position: relative;
 	z-index: 999;
+	padding: 4em 0;
 
 	@media (min-width: 640px) {
+		padding: 4em;
+		margin-top: 4em;
+
 		.medium-4 & {
 			margin-right: 0;
 			margin-left: -12em;
