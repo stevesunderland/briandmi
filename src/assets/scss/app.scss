@@ -51,7 +51,7 @@
 
 
 
-$white: #FFFCF0;
+$white: #ffffff;
 
 
 .script {
@@ -116,7 +116,7 @@ a {
 
 .button {
 	text-transform: uppercase;
-	letter-spacing: .1em;
+	letter-spacing: .0em;
 	// border-radius: .25em;
 
 	&.hollow {
@@ -124,9 +124,10 @@ a {
 		color: #000;
 		@extend .script;
 		// font-weight: bold;
-		font-size: 1.5em;
+		font-size: 2em;
 		padding: 0;
 		margin-right: 1em;
+		// margin-left: 1em;
 		border-bottom: 1px solid #000;
 		// border-radius: 0;
 
