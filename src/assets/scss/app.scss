@@ -206,6 +206,9 @@ nav {
 		font-size: 3.5em;
 		margin: 0;
 		// font-weight: bold;
+		a {
+			text-decoration: none;
+		}
 	}
 	ul {
 		@media (max-width: 1024px) {
