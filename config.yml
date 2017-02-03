@@ -65,5 +65,6 @@ PATHS:
     # - "bower_components/foundation-sites/js/foundation.toggler.js"
     # - "bower_components/foundation-sites/js/foundation.tooltip.js"
     # Paths to your own project code are here
+    - "bower_components/masonry/dist/masonry.pkgd.js"
     - "src/assets/js/!(app).js"
     - "src/assets/js/app.js"

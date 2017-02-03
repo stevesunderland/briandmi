@@ -9,6 +9,7 @@ var Site = {
 		if ( $(window).width() > 640 ) {
 			Site.scrollmagic();
 		}
+		Site.grid();
 	},
 	scrollmagic: function() {
 		// init controller

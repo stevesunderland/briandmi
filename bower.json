@@ -19,7 +19,8 @@
     "motion-ui": "~1.2.2",
     "scrollmagic": "~2.0.5",
     "lazyloadxt": "~1.0.5",
-    "gsap": "~1.18.4"
+    "gsap": "~1.18.4",
+    "masonry": "^4.1.1"
   },
   "private": true
 }
