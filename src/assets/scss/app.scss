@@ -9,7 +9,7 @@
 // @include foundation-flex-grid;
 @include foundation-typography;
 @include foundation-button;
-// @include foundation-forms;
+@include foundation-forms;
 // @include foundation-range-input;
 // @include foundation-accordion;
 // @include foundation-accordion-menu;
@@ -79,7 +79,6 @@ body {
 }
 
 h1 {
-	// @extend .script;
 	@extend .fancy;
 	font-size: 6em;
 	line-height: 1;
@@ -92,8 +91,6 @@ h2 {
 	@extend .script;
 	font-weight: bold;
 	font-size: 2.5em;
-	// line-height: 1;
-	// @extend .fancy;
 }
 h3 {
 	// @extend .script;
@@ -141,14 +138,23 @@ p {
 	}
 
 	&.lead {
-		font-size: 1.5em;
+		font-size: 1.125em;
 		@extend .serif;
+
+		@media (min-width: 640px) {
+			font-size: 1.5em;
+
+		}
 	}
 }
 
 a {
 	color: #000;
 	text-decoration: underline;
+
+	&:hover, &:active, &:focus {
+		color: coral;
+	}
 }
 
 .button {
@@ -194,7 +200,7 @@ body {
 
 nav {
 	// @extend .padding;
-	padding: 2em 4em 1em;
+	padding: 2em 1.3em 1em;
 	position: fixed;
 	z-index: 99999;
 	background-color: #fff;
@@ -202,27 +208,73 @@ nav {
 	left: 0;
 	right: 0;
 
+	@media(min-width: 640px) {
+		padding: 2em 4em 1em;
+	}
+
 	h1 {
-		font-size: 3.5em;
+		font-size: 2.5em;
 		margin: 0;
+
+		@media(min-width: 640px) {
+			font-size: 3.5em;
+		}
+
 		// font-weight: bold;
 		a {
 			text-decoration: none;
 		}
 	}
 	ul {
-		@media (max-width: 1024px) {
-			display: none;
+		@media (max-width: 640px) {
+			// display: none;
+			width: 100%;
+			// padding: 1em 0 !important;
+			height: 0px;
+			overflow: hidden;
+			transition: height 1s;
+
+			.menu-open & {
+				height: 100vh;
+			}
 		}
+
 		li {
 			@extend .serif;
 			text-transform: uppercase;
 			font-size: 0.8em;
 			letter-spacing: .05em;
 
+			@media (max-width: 640px) {
+				display: block !important;
+
+				&:first-child {
+					margin-top: 4em;
+				}
+				// width:
+			}
+
 			a {
 				text-decoration: none;
+
+				@media (max-width: 640px) {
+					padding: 2em 0 !important;
+					// line-height: ;
+				}
 			}
+		}
+	}
+	.menu-toggle {
+		font-size: 0.7em;
+		text-decoration: none;
+		text-transform: uppercase;
+		padding: 0.5em 1em;
+		border: 1px solid #ccc;
+		color: #999;
+		display: none;
+
+		@media (max-width: 640px) {
+			display: block;
 		}
 	}
 }
@@ -255,9 +307,10 @@ nav {
 
 section {
 	margin-bottom: 5em;
-	padding-top: 7em;
+	padding-top: 6em;
 
 	@media (min-width: 640px) {
+		padding-top: 7em;
 			// margin-bottom: 10em;
 	}
 
